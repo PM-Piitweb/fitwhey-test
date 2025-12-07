@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "slug": "baam-my-whey-5lb",
+    "name": "Baam 100% My Whey (5lb)",
+    "price": 1800,
+    "price_old": 2000,
+    "your_price": 1600,
+    "points": 500,
+    "images": [
+      "/src/assets/img/place-holder0.png",
+      "/src/assets/img/place-holder0-1.png",
+      "/src/assets/img/place-holder0-2.png"
+    ],
+    "label": "5lb",
+    "description": "<strong>BAAM!! MY WHEY</strong> เป็นเวย์ที่มีส่วนผสมของ Whey protein Concentrate เป็นหลัก (95%+)...",
+    "benefits": [
+      "โปรตีนดูดซึมไว 25 g. / ช้อน",
+      "พลังงาน 140 Kcal. (ไขมัน 2 กรัม, คาร์โบไฮเดรท 4 กรัม)",
+      "ให้ BCAA ~5.5 g."
+    ]
+  }
+]

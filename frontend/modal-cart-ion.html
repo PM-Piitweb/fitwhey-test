@@ -10,8 +10,8 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="src/assets/css/main.css">
+    <link rel="stylesheet" href="src/assets/css/custom.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
                                 <ion-img class="product-img" src="assets/img/product-mock3.png"></ion-img>
                                 <ion-buttons class="qcart-closing-btn">
                                     <ion-button>
-                                        <img src="assets/icon/closing-icon.svg">
+                                        <img src="public/assets/icon/closing-icon.svg">
                                     </ion-button>
                                 </ion-buttons>
                                 <div class="qcart-info-right">
@@ -38,23 +38,23 @@
                                     <div class="price-d">฿1,250 <span class="price-o">฿1,699</span></div>
                                     <!-- <div class="price-d">฿1,250</div> -->
                                     <div class="qcart-points">
-                                        <img src="assets/icon/clear-point-icon.svg"/><span class="point">200</span>
+                                        <img src="public/assets/icon/clear-point-icon.svg"/><span class="point">200</span>
                                     </div>
                                     <a href="#" class="qcart-lm">Learn More ></a>
                                 </div>
                             </div>
                             <!-- mid and bottom section wrap -->
                             <div class="qcart-exp">EXP:20/2021</div>
-                            <div class="qcart-mid-wrap">
+                            
                                 <!-- mid section -->
                                 <div class="qcart-selector-wrap">
                                     <div class="qcart-selector">
                                         <div class="qcart-heading"> Size <span class="select-num"> (Select 1)</span></div>
                                         <ion-buttons class="selector-btn-wrap">
-                                            <ion-button class="selector-btn n-select">Sample <img class="flash" src="assets/icon/mnf.svg"></ion-button>
+                                            <ion-button class="selector-btn n-select">Sample <img class="flash" src="public/assets/icon/mnf.svg"></ion-button>
                                             <ion-button class="selector-btn n-select">250g</ion-button>
-                                            <ion-button class="selector-btn select ">1lb <img class="flash" src="assets/icon/mnf.svg"></ion-button>
-                                            <ion-button class="selector-btn disable">3lb <img class="flash" src="assets/icon/mnf.svg"></ion-button>
+                                            <ion-button class="selector-btn select ">1lb <img class="flash" src="public/assets/icon/mnf.svg"></ion-button>
+                                            <ion-button class="selector-btn disable">3lb <img class="flash" src="public/assets/icon/mnf.svg"></ion-button>
                                             <ion-button class="selector-btn n-select">5lb</ion-button>
                                             <ion-button class="selector-btn n-select">10lb</ion-button>
                                         </ion-buttons>
@@ -73,21 +73,27 @@
                                         </ion-buttons>
                                     </div>
                                 </div>
+                                
+                                <!-- CART ITEMS RENDER HERE -->
+                                <div id="cart-items" class="cart-items-list">
+
+                                </div>
+
                                 <!-- bottom section -->
                                 <ion-footer class="qcart-confirm-footer">
                                     <div class="scroll-arrow-wrap" id="scrollable-arrow">
-                                        <img src="assets/icon/arrow-down-icon.svg">
+                                        <img src="public/assets/icon/arrow-down-icon.svg">
                                     </div>
                                     <div class="qcart-confirm" lines="none">
                                         <div class="qcart-qty-wrap">
                                             <p class="qty-left">Quantity</p>
                                             <div class="qty-right">
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/subtract-icon.svg">
+                                                    <img src="public/assets/icon/subtract-icon.svg">
                                                 </ion-button>
                                                 <span class="quickcart-text-qty">1</span>
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/add-icon.svg">
+                                                    <img src="public/assets/icon/add-icon.svg">
                                                 </ion-button>
                                             </div>
                                         </div>
@@ -125,10 +131,10 @@
                         <div class="position-wrap">
                             <!-- top section -->
                             <div class="qcart-top-info-wrap">
-                                <ion-img class="product-img" src="assets/img/product-mock3.png"></ion-img>
+                                <ion-img class="product-img" src="src/assets/img/product-mock3.png"></ion-img>
                                 <ion-buttons class="qcart-closing-btn">
                                     <ion-button>
-                                        <img src="assets/icon/closing-icon.svg">
+                                        <img src="public/assets/icon/closing-icon.svg">
                                     </ion-button>
                                 </ion-buttons>
                                 <div class="qcart-info-right">
@@ -136,8 +142,8 @@
                                     <p class="qcart-des">Short description two sentence Lorem ipsum Short description two</p>
                                     <div class="price-d">฿1,250 <span class="price-o">฿1,699</span></div>
                                     <!-- <div class="price-d">฿1,250</div> -->
-                                    <div class="qcart-points">
-                                        <img src="assets/icon/clear-point-icon.svg"/><span class="point">200</span>
+                                    <div class="qcart-mid-wrap">div class="qcart-points">
+                                        <img src="public/assets/icon/clear-point-icon.svg"/><span class="point">200</span>
                                     </div>
                                 </div>
                             </div>
@@ -173,18 +179,21 @@
                                 <!-- bottom section -->
                                 <ion-footer class="qcart-confirm-footer">
                                     <div class="scroll-arrow-wrap" id="scrollable-arrow">
-                                        <img src="assets/icon/arrow-down-icon.svg">
+                                        <img src="public/assets/icon/arrow-down-icon.svg">
                                     </div>
                                     <div class="qcart-confirm" lines="none">
                                         <div class="qcart-qty-wrap">
                                             <p class="qty-left">Quantity</p>
+                                            <p class="cart-total-label">Total</p>
+                                            <p id="cart-total" class="cart-total">฿0</p>
+
                                             <div class="qty-right">
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/subtract-icon.svg">
+                                                    <img src="public/assets/icon/subtract-icon.svg">
                                                 </ion-button>
                                                 <span class="quickcart-text-qty">1</span>
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/add-icon.svg">
+                                                    <img src="public/assets/icon/add-icon.svg">
                                                 </ion-button>
                                             </div>
                                         </div>
@@ -222,10 +231,10 @@
                         <div class="position-wrap">
                             <!-- top section -->
                             <div class="qcart-top-info-wrap">
-                                <ion-img class="product-img" src="assets/img/product-mock4.png"></ion-img>
+                                <ion-img class="product-img" src="src/assets/img/product-mock4.png"></ion-img>
                                 <ion-buttons class="qcart-closing-btn">
                                     <ion-button>
-                                        <img src="assets/icon/closing-icon.svg">
+                                        <img src="public/assets/icon/closing-icon.svg">
                                     </ion-button>
                                 </ion-buttons>
                                 <div class="qcart-info-right">
@@ -234,7 +243,7 @@
                                     <div class="price-d">฿2,499 <span class="price-o">฿2,000</span></div>
                                     <!-- <div class="price-d">฿1,250</div> -->
                                     <div class="qcart-points">
-                                        <img src="assets/icon/clear-point-icon.svg"/><span class="point">200</span>
+                                        <img src="public/assets/icon/clear-point-icon.svg"/><span class="point">200</span>
                                     </div>
                                 </div>
                             </div>
@@ -279,18 +288,18 @@
                                 <!-- bottom section -->
                                 <ion-footer class="qcart-confirm-footer">
                                     <div class="scroll-arrow-wrap" id="scrollable-arrow">
-                                        <img src="assets/icon/arrow-down-icon.svg">
+                                        <img src="public/assets/icon/arrow-down-icon.svg">
                                     </div>
                                     <div class="qcart-confirm" lines="none">
                                         <div class="qcart-qty-wrap">
                                             <p class="qty-left">Quantity</p>
                                             <div class="qty-right">
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/subtract-icon.svg">
+                                                    <img src="public/assets/icon/subtract-icon.svg">
                                                 </ion-button>
                                                 <span class="quickcart-text-qty">1</span>
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/add-icon.svg">
+                                                    <img src="public/assets/icon/add-icon.svg">
                                                 </ion-button>
                                             </div>
                                         </div>
@@ -328,10 +337,10 @@
                         <div class="position-wrap">
                             <!-- top section -->
                             <div class="qcart-top-info-wrap">
-                                <ion-img class="product-img" src="assets/img/product-mock3.png"></ion-img>
+                                <ion-img class="product-img" src="src/assets/img/product-mock3.png"></ion-img>
                                 <ion-buttons class="qcart-closing-btn">
                                     <ion-button>
-                                        <img src="assets/icon/closing-icon.svg">
+                                        <img src="public/assets/icon/closing-icon.svg">
                                     </ion-button>
                                 </ion-buttons>
                                 <div class="qcart-info-right">
@@ -340,7 +349,7 @@
                                     <div class="price-d">฿1,250 <span class="price-o">฿1,699</span></div>
                                     <!-- <div class="price-d">฿1,250</div> -->
                                     <div class="qcart-points">
-                                        <img src="assets/icon/clear-point-icon.svg"/><span class="point">200</span>
+                                        <img src="public/assets/icon/clear-point-icon.svg"/><span class="point">200</span>
                                     </div>
                                 </div>
                             </div>
@@ -363,18 +372,18 @@
                                 <!-- bottom section -->
                                 <ion-footer class="qcart-confirm-footer">
                                     <div class="scroll-arrow-wrap" id="scrollable-arrow">
-                                        <img src="assets/icon/arrow-down-icon.svg">
+                                        <img src="public/assets/icon/arrow-down-icon.svg">
                                     </div>
                                     <div class="qcart-confirm" lines="none">
                                         <div class="qcart-qty-wrap">
                                             <p class="qty-left">Quantity</p>
                                             <div class="qty-right">
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/subtract-icon.svg">
+                                                    <img src="public/assets/icon/subtract-icon.svg">
                                                 </ion-button>
                                                 <span class="quickcart-text-qty">1</span>
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/add-icon.svg">
+                                                    <img src="public/assets/icon/add-icon.svg">
                                                 </ion-button>
                                             </div>
                                         </div>
@@ -412,10 +421,10 @@
                         <div class="position-wrap">
                             <!-- top section -->
                             <div class="qcart-top-info-wrap">
-                                <ion-img class="product-img" src="assets/img/product-mock3.png"></ion-img>
+                                <ion-img class="product-img" src="src/assets/img/product-mock3.png"></ion-img>
                                 <ion-buttons class="qcart-closing-btn">
                                     <ion-button>
-                                        <img src="assets/icon/closing-icon.svg">
+                                        <img src="public/assets/icon/closing-icon.svg">
                                     </ion-button>
                                 </ion-buttons>
                                 <div class="qcart-info-right">
@@ -449,18 +458,18 @@
                                 <!-- bottom section -->
                                 <ion-footer class="qcart-confirm-footer">
                                     <div class="scroll-arrow-wrap" id="scrollable-arrow">
-                                        <img src="assets/icon/arrow-down-icon.svg">
+                                        <img src="public/assets/icon/arrow-down-icon.svg">
                                     </div>
                                     <div class="qcart-confirm" lines="none">
                                         <div class="qcart-qty-wrap">
                                             <p class="qty-left">Quantity</p>
                                             <div class="qty-right">
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/subtract-icon.svg">
+                                                    <img src="public/assets/icon/subtract-icon.svg">
                                                 </ion-button>
                                                 <span class="quickcart-text-qty">1</span>
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/add-icon.svg">
+                                                    <img src="public/assets/icon/add-icon.svg">
                                                 </ion-button>
                                             </div>
                                         </div>
@@ -498,10 +507,10 @@
                         <div class="position-wrap">
                             <!-- top section -->
                             <div class="qcart-top-info-wrap">
-                                <ion-img class="product-img" src="assets/img/product-mock5.png"></ion-img>
+                                <ion-img class="product-img" src="src/assets/img/product-mock5.png"></ion-img>
                                 <ion-buttons class="qcart-closing-btn">
                                     <ion-button>
-                                        <img src="assets/icon/closing-icon.svg">
+                                        <img src="public/assets/icon/closing-icon.svg">
                                     </ion-button>
                                 </ion-buttons>
                                 <div class="qcart-info-right">
@@ -526,18 +535,18 @@
                                 <!-- bottom section -->
                                 <ion-footer class="qcart-confirm-footer">
                                     <div class="scroll-arrow-wrap" id="scrollable-arrow">
-                                        <img src="assets/icon/arrow-down-icon.svg">
+                                        <img src="public/assets/icon/arrow-down-icon.svg">
                                     </div>
                                     <div class="qcart-confirm" lines="none">
                                         <div class="qcart-qty-wrap">
                                             <p class="qty-left">Quantity</p>
                                             <div class="qty-right">
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/subtract-icon.svg">
+                                                    <img src="public/assets/icon/subtract-icon.svg">
                                                 </ion-button>
                                                 <span class="quickcart-text-qty">1</span>
                                                 <ion-button class="qcart-btn-qty">
-                                                    <img src="assets/icon/add-icon.svg">
+                                                    <img src="public/assets/icon/add-icon.svg">
                                                 </ion-button>
                                             </div>
                                         </div>
